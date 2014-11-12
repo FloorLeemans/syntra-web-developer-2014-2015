@@ -15,5 +15,7 @@ De cursus vind je terug op de [Web Backend GitHub repository](https://github.com
 	- email: ---
 	- GitHub: ---
 
-
+- Leemans Floor
+	- email: floorleemans@outlook.com
+	- GitHub: https://github.com/FloorLeemans
 
