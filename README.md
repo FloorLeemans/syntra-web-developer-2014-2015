@@ -59,6 +59,7 @@ De cursus vind je terug op de [Web Backend GitHub repository](https://github.com
 11. Boran Eksen
 	- email: boran_eksen1 -- hotmail.com
 	- Github: https://github.com/Boran-Eksen
-11. Laurens Van Ham
+	- 
+12. Laurens Van Ham
 	- email: vanhamlaurens -- gmail.com
 	- Github: https://github.com/l4wz
