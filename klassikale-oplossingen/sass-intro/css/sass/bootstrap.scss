@@ -1,0 +1,48 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+@import "_normalize.scss";
+
+$width: 600px;
+$margin: 6px;
+$padding: 6px;
+$border: 1px;
+
+body
+{
+	background-color: $primary-color;
+}
+
+.container
+{
+	margin: 0 auto;
+	margin: $margin;
+	padding: $padding;
+	width: 640px - (2 * $margin) - (2 * $padding);
+}
+
+p
+{
+	background-color: $secondary-color;
+}
+
+.test
+{
+	background-color: $secondary-color;
+	@include left-rounded-border( 10px );
+}
+
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+  font-size:25px;
+}
+
+.success {
+  @extend .message;
+  border-color: green;
+  background-color: green;
+}
+
+@import "_header.scss";
