@@ -50,19 +50,54 @@ De stukken van Hergé maakten deel uit van een speciale verkoop gewijd aan origi
 	$individueelArtikel	=	false;
 	$artikelsContainer	=	array();
 
-	foreach( $artikels as $id => $artikel )
-	{
-		$artikelsContainer[ $id ]	=	$artikel;
+	$artikelBestaat		=	false;
 
-		$artikelsContainer[ $id ][ 'inhoudVerkort' ]	=	substr( $artikel[ 'inhoud' ], 0, 50 );
+	function overloopArtikels( $artikels )
+	{
+		$artikelsContainer	=	array();
+
+		foreach( $artikels as $id => $artikel )
+		{
+			$artikelsContainer[ $id ]	=	$artikel;
+
+			$artikelsContainer[ $id ][ 'inhoudVerkort' ]	=	substr( $artikel[ 'inhoud' ], 0, 50 );
+		}
+
+		return $artikelsContainer;
 	}
+
+	$artikelsContainer	=	overloopArtikels( $artikels );
 
 	if ( isset( $_GET['id'] ) )
 	{
 		$id 	=	$_GET['id'];
 		$individueelArtikel	=	true;
 
-		$artikelsContainer	=	$artikelsContainer[ $id ];
+		if ( isset( $artikels[ $id ] ) )
+		{
+			$artikelBestaat		=	true;
+			$artikelsContainer	=	$artikelsContainer[ $id ];
+		}		
+	}
+
+	if ( isset( $_POST['submit'] ) )
+	{
+		$needle	=	$_POST[ 'query' ];
+
+		$gevondenArtikels	=	array();
+
+		foreach( $artikels as $id => $artikel )
+		{
+			$haystack				=	$artikel[ 'inhoud' ];
+			$searchStringOccurs 	=	strpos( $haystack, $needle );
+
+			if( $searchStringOccurs !== false )
+			{
+				$gevondenArtikels[ $id ]	=	$artikel;
+			}
+		}
+
+		$artikelsContainer	=	overloopArtikels( $gevondenArtikels );
 	}
 
 ?>
@@ -129,6 +164,16 @@ De stukken van Hergé maakten deel uit van een speciale verkoop gewijd aan origi
 
 	<h1>Oplossing get: deel1</h1>
 
+	<form action="<?= $_SERVER[ 'PHP_SELF' ] ?>" method="POST">
+		<ul>
+			<li>
+				<label for="query">Zoeken in artikels:</label>
+				<input type="text" name="query" id="query">
+			</li>
+		</ul>
+		<input type="submit" name="submit">
+	</form>
+
 	<div class="container">
 
 		<?php if ($individueelArtikel == false): ?>
@@ -143,14 +188,28 @@ De stukken van Hergé maakten deel uit van een speciale verkoop gewijd aan origi
 				</article>
 				
 			<?php endforeach ?>
+
 		<?php else: ?>
+
 			<p>individueel artikel</p>
-			<article>
-				<h1><?= $artikelsContainer['titel'] ?> | <?= $artikelContainer['datum'] ?></h1>
-				<p><?= $artikelsContainer['inhoud'] ?></p>
-				<img src="img/<?= $artikelsContainer[ 'afbeelding' ] ?>" alt="<?= $artikelsContainer[ 'afbeeldingBeschrijving' ] ?>">
+			
+			<?php if ( $artikelBestaat ): ?>
+
+				<article>
 				
-			</article>
+					<h1><?= $artikelsContainer['titel'] ?> | <?= $artikelsContainer['datum'] ?></h1>
+					<p><?= $artikelsContainer['inhoud'] ?></p>
+					<img src="img/<?= $artikelsContainer[ 'afbeelding' ] ?>" alt="<?= $artikelsContainer[ 'afbeeldingBeschrijving' ] ?>">
+					
+				</article>
+
+			<?php else: ?>
+
+				<p>Het artikel met id <?= $id ?> bestaat niet. Probeer een ander artikel. <a href="<?= $_SERVER['PHP_SELF'] ?>">Terug naar overzicht</a></p>
+
+			<?php endif ?>
+			
+
 		<?php endif ?>
 
 		
