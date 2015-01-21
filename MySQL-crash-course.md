@@ -124,6 +124,20 @@ SELECT *
   WHERE is_human = TRUE
 ````
 
+#### LIKE (=operator)
+
+Zoekt naar bepaald string-patroon.
+"%" is een wildcard en matcht alle karakters
+
+bv.
+````
+SELECT *
+  FROM interstellar
+  WHERE acteur LIKE "E%"
+````
+
+Zoekt naar alle acteurs waarvan de naam met een "E" begint
+
 ### LIMIT
 
 Een aantal rijen selecteren op basis van het gevraagde LIMIT getal.
