@@ -127,7 +127,7 @@ SELECT *
 #### LIKE (=operator)
 
 Zoekt naar bepaald string-patroon.
-"%" is een wildcard en matcht alle karakters
+"%" is een wildcard en matcht alle karakters 0 of n keer
 
 bv.
 ````
