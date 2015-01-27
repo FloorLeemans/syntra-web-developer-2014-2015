@@ -16,7 +16,7 @@ De cursus vind je terug op de [Web Backend GitHub repository](https://github.com
 	- Vind je hier terug: http://pascalculator.be/syntra/examen-web-backend-01/
 	- Het is de bedoeling om deze opdracht zo nauwkeurig mogelijk na te bouwen
 	- Het draait om functionaliteit, niet om layout (deze mag je letterlijke overnemen)
-	- Test het voorbeeldopdracht uitvoerig om zo een goed beeld te hebben van wat er allemaal in verwerkt zit
+	- Test de voorbeeldopdracht uitvoerig om zo een goed beeld te hebben van wat er allemaal in verwerkt zit
 	- Vergeet de nodige controle/foutboodschappen niet
 	- Niet verplicht, maar sterk aan te raden: werken met classes!
 	- Tip: maak het jezelf niet te moeilijk. Deze opdracht kan met een 50-tal lijntjes PHP opgelost worden.
