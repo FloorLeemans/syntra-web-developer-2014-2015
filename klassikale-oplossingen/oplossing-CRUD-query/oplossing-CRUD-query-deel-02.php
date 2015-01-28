@@ -5,13 +5,6 @@
 	$db = new PDO('mysql:host=localhost;dbname=bieren', 'root', ''); // Connectie maken
 
 	// Query string
-	/*$queryString	=	'SELECT *
-							FROM bieren
-    							INNER JOIN brouwers
-    							ON bieren.brouwernr = brouwers.brouwernr
-    						WHERE bieren.naam LIKE "Du%"
-    						AND brouwers.brnaam LIKE "%a%"';*/
-
     $brouwersQueryString    =   'SELECT brouwernr, 
                                         brnaam
                                     FROM brouwers';
@@ -64,7 +57,7 @@
         <meta charset="utf-8">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Untitled</title>
+        <title>Oplossing CRUD-Query: deel2</title>
         <style>
          	table
             {
