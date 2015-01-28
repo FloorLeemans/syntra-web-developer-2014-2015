@@ -96,3 +96,8 @@ De cursus vind je terug op de [Web Backend GitHub repository](https://github.com
 12. Laurens Van Ham
 	- email: vanhamlaurens -- gmail.com
 	- Github: https://github.com/l4wz
+
+13. Wannes smedts
+        - email: wannes.smedts -- hotmail.be
+        - Github: https://github.com/wannessmedts
+	
