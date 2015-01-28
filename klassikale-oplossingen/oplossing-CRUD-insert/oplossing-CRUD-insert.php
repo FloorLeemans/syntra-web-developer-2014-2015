@@ -14,7 +14,7 @@
         $gemeente       =   $_POST[ 'gemeente' ];
         $omzet          =   $_POST[ 'omzet' ];
 
-        
+
         $db = new PDO('mysql:host=localhost;dbname=bieren', 'root', ''); // Connectie maken
 
         $insertBrouwerQuery =   'INSERT INTO brouwers (brnaam,
@@ -81,25 +81,30 @@
 
             .modal
             {
-                border-radius:3px;
-                border-width:1px;
-                padding:6px;
+                margin:5px 0px;
+                padding:5px;
+                border-radius:5px;
             }
-
-            .modal
-            {
-                padding         :   6px;
-                border-radius   :   3px;
-            }
-
+            
             .success
             {
-                background-color:lightgreen;
+                color:#468847;
+                background-color:#dff0d8;
+                border:1px solid #d6e9c6;
             }
-
+            
             .error
             {
-                background-color:red;
+                color:#b94a48;
+                background-color:#f2dede;
+                border:1px solid #eed3d7;
+            }
+            
+            .warning
+            {
+                color:#3a87ad;
+                background-color:#d9edf7;
+                border:1px solid #bce8f1;
             }
 
 
