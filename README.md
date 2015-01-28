@@ -97,7 +97,6 @@ De cursus vind je terug op de [Web Backend GitHub repository](https://github.com
 	- email: vanhamlaurens -- gmail.com
 	- Github: https://github.com/l4wz
 
-13. Wannes smedts
-        - email: wannes.smedts -- hotmail.be
-        - Github: https://github.com/wannessmedts
-	
+13. Nathan De Mol
+	- email: neejten@gmail.com
+	- GitHub: https://github.com/Neejten
