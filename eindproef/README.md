@@ -41,7 +41,7 @@ Na 26/3
 - Bij het aanklikken van een categorie wordt een overzicht gegeven van alle producten
  - Een foto, de titel en de prijs van het product zijn voldoende in dit overzicht
  - Wanneer men op een product klikt, komt men op de detailpagina van het productterecht
- - 
+
 #### Zoekfunctie (sectie)
 - Lijst de producten op met de zoekterm die voorkomt in de naam of beschrijving
 - De resultaten verwijzen door naar de detail-pagina’s.
