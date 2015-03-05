@@ -5,6 +5,9 @@
 
 	session_start();
 
+	define( 'BASE_URL', 'http://' . $_SERVER[ 'HTTP_HOST' ] . $_SERVER[ 'PHP_SELF' ] );
+	
+
 	// Maak de sessie leeg
 	if ( isset( $_GET[ 'action' ] ) )
 	{
@@ -16,9 +19,8 @@
 		}
 	}
 
-	define( 'BASE_URL', 'http://' . $_SERVER[ 'HTTP_HOST' ] . $_SERVER[ 'PHP_SELF' ] );
 
-	// Globale variabele
+	// Globale variabelen
 	$message	=	false;
 
 	$todosFromSession	=	( isset ( $_SESSION['todos'] ) ) ? $_SESSION['todos'] : false;
