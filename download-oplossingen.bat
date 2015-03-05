@@ -12,4 +12,6 @@ git clone https://github.com/JoeriMahieu/web-backend-oplossingen.git joeri
 git clone https://github.com/mivixof/web-backend-solutions.git carl
 git clone https://github.com/Boran-Eksen/web-backend-oplossingen.git boran
 git clone https://github.com/l4wz/web-backend-oplossingen-LvH.git laurens
+git clone https://github.com/Neejten/web-backend-oplossingen.git nathan
+git clone https://github.com/wannessmedts/web-backend-oplossingen.git wannes
 
