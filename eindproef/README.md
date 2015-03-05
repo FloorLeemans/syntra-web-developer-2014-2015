@@ -1,45 +1,44 @@
-Eindwerk VDO Web Dev 2014 - 2015
+Eindwerk Syntra VDO Web Developer 2014 - 2015
+=============================================
 
-Planning
+# Planning
 
-Planning:
-– Tegen 24/4:
-• Alle stappen van de strategie TOT effectieve uitwerking moeten
-afgewerkt zijn -> anders niet beginnen programmeren.
-• Mag vroeger aan programmeren beginnen MITS goedkeuring
-– Na 24/4
-• Uitwerking van de applicatie
-• Inhoudelijke begeleiding is mogelijk, maar moeilijk -> tijdsspanne van
-1 dag: niet veel!
-– Kom VOORBEREID!
-• Individuele milestones -> tegen volg
+Tegen 26/3:
+- Alle stappen van de strategie TOT effectieve uitwerking moeten afgewerkt zijn -> anders niet beginnen programmeren.
+- Mag vroeger aan programmeren beginnen MITS goedkeuring
 
-Vereisten eindwerk
+Na 26/3
+- Uitwerking van de applicatie
+- Inhoudelijke begeleiding is mogelijk, maar moeilijk -> tijdsspanne van 1 dag: niet veel!
+- Kom VOORBEREID!
+- Individuele milestones -> tegen volgende meeting
 
-Bundel
-– +/- 10-tal pagina’s.
-– Bevat
-• Mock-ups
-• Functionele analyse
-• Print-out van de database
-• User test van minstens 2 personen
-• Minstens twee stukken code met uitleg
-– Wat doet de code
-– Hoe gebeurt dit?
+# Vereisten eindwerk
 
-Webshop
-– Navigatiemenu
-• Producten
-• Over ons
-• Contact
-• Winkelmandje
-• Inloggen
-• Producten
-– Hier worden de categorieën opegesomd
-– Bij het aanklikken van een categorie wordt een overzicht gegeven van alle producten
-» Een foto, de titel en de prijs van het product zijn voldoende in dit overzicht
-» Wanneer men op een product klikt, komt men op de detailpagina van het product
-terecht
+## Bundel
+- +/- 10-tal pagina’s.
+- Bevat
+ - Mock-ups
+ - Functionele analyse
+ - Print-out van de database
+ - User test van minstens 2 personen
+ - Minstens twee stukken code met uitleg
+   - Wat doet de code
+   - Hoe gebeurt dit?
+
+## Digitale Webshop
+
+- Navigatiemenu
+ - Producten
+ - Over ons
+ - Contact
+ - Winkelmandje
+ - Inloggen
+ - Producten
+- Hier worden de categorieën opegesomd
+- Bij het aanklikken van een categorie wordt een overzicht gegeven van alle producten
+ - Een foto, de titel en de prijs van het product zijn voldoende in dit overzicht
+ - Wanneer men op een product klikt, komt men op de detailpagina van het productterecht
 
 – Producten: detailpagina
 • Hier wordt het volledige product weergegeven, inclusief een koop
