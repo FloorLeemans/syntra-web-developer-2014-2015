@@ -28,7 +28,9 @@ Na 26/3
 
 ## Digitale Webshop
 
-- Navigatiemenu
+### Onderdelen
+
+#### Navigatiemenu (sectie)
  - Producten
  - Over ons
  - Contact
@@ -39,43 +41,46 @@ Na 26/3
 - Bij het aanklikken van een categorie wordt een overzicht gegeven van alle producten
  - Een foto, de titel en de prijs van het product zijn voldoende in dit overzicht
  - Wanneer men op een product klikt, komt men op de detailpagina van het productterecht
+ - 
+#### Zoekfunctie (sectie)
+- Lijst de producten op met de zoekterm die voorkomt in de naam of beschrijving
+- De resultaten verwijzen door naar de detail-pagina’s.
+ - Toon een gepaste boodschap wanneer er niets gevonden werd.
 
-– Producten: detailpagina
-• Hier wordt het volledige product weergegeven, inclusief een koop
-knop
-• Wanneer op de koop-knop wordt geklikt wordt het product
-toegevoegd aan het winkelmandje
-• Het product kan enkel aan het winkelmandje toegevoegd worden als
-de gebruiker ingelogd is
-– Is de gebruiker niet ingelogd, toon dan de login-pagina.
-• Een product heeft:
-– categorie
-– titel
-– foto
-– beschrijving
-– prijs
+#### Producten: overzicht (pagina)
+- Hier wordt een overzicht getoond van alle mogelijk producten
+- Je moet de producten per categorie kunnen opvragen
 
-Over ons
-• een statische pagina met wat meer informatie over de winkel
+#### Producten: detail (pagina)
 
-– Contact
-• Een contactformulier waarmee je een vraag kan stellen aan de winkelen
-– Zoekfunctie:
-• Lijst de producten op met de zoekterm die voorkomt in de naam of beschrijving
-– De resultaten verwijzen door naar de detail-pagina’s.
-• Toon een gepaste boodschap wanneer er niets gevonden werd.
-– Winkelmandje
-• Toont een inlogscherm wanneer de gebruiker nog niet is ingelogd
-• Hier worden de producten getoond die de gebruiker aan het winkelmandje heeft
-toegevoegd
-• Betalen-knop
-– Wanneer de gebruiker op deze knop klikt, wordt er een finaal overzicht van de bestelling
-gegeven
-– De gebruiker heeft de mogelijkheid om deze bestelling te bevestigen
-– Wanneer de bestelling bevestigd wordt, wordt er een mail gestuurd naar de klant met daarin
-een overzicht van de bestelling, een unieke betaalcode en een rekeningnummer
-– De winkeleigenaar krijgt een mail met een overzicht van de bestelling
-» Deze bestelling wordt ook aan de database toegevoegd(absolute minimum= datum,
+- Hier wordt het volledige product weergegeven, inclusief een koop knop
+- Wanneer op de koop-knop wordt geklikt wordt het product toegevoegd aan het winkelmandje
+- Het product kan enkel aan het winkelmandje toegevoegd worden als de gebruiker ingelogd is
+- Is de gebruiker niet ingelogd, toon dan de login-pagina.
+- Een product heeft:
+  - categorie
+  - titel
+  - foto
+  - beschrijving
+  - prijs
+
+#### Over ons (pagina)
+
+- een statische pagina met wat meer informatie over de winkel
+
+#### Contact
+
+- Een contactformulier waarmee je een vraag kan stellen aan de winkelen
+
+#### Winkelmandje (pagina)
+- Toont een inlogscherm wanneer de gebruiker nog niet is ingelogd
+- Hier worden de producten getoond die de gebruiker aan het winkelmandje heeft toegevoegd
+- Betalen-knop
+ - Wanneer de gebruiker op deze knop klikt, wordt er een finaal overzicht van de bestelling gegeven
+- De gebruiker heeft de mogelijkheid om deze bestelling te bevestigen
+- Wanneer de bestelling bevestigd wordt, wordt er een mail gestuurd naar de klant met daarin een overzicht van de bestelling, een unieke betaalcode en een rekeningnummer
+- De winkeleigenaar krijgt een mail met een overzicht van de bestelling
+- Deze bestelling wordt ook aan de database toegevoegd(absolute minimum= datum,
 totaalprijs, unieke code , klant & status)
 
 Inloggen
