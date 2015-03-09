@@ -134,6 +134,8 @@ Bevat dezelfde structuur als de publieke Product-pagina.
 - De bestellingen zijn gerangschikt per status: besteld, betaald, verstuurd
 - De winkeleigenaar heeft de mogelijkheid om de bestelling van status te veranderen OF te verwijderen
 
+## Algemeen
+
 Bundel en eindwerk worden digitaal afgeleverd
 - Bundel: digitaal formaat is voldoende
 - Webshop: alle code, inclusief correcte SQL-export
@@ -141,81 +143,79 @@ Bundel en eindwerk worden digitaal afgeleverd
 - voorzie voor elk jury-lid een kopie (niets met doorgeven)
 
 
-Strategie
+# Strategie
 
-Onderzoek/laat je inspireren
-– coolblue.com
-– bol.com
-– etsy.com
-• Schrijf uit wat er op jouw webshop allemaal
-kan
-– letterlijk een scenario uitschrijven voor klant en
-voor admin
+Onderzoek/laat je inspireren:
+- http://www.coolblue.be
+- http://www.bol.com
+- http://www.etsy.com
 
-Teken een site map voor jouw webshop uit
+- Schrijf uit wat er op jouw webshop allemaal kan
 
-Beschrijf de functionaliteiten die nodig zijn
-voor elke pagina
-– Bv. inlogfunctie, uitlogfunctie, producten ophalen
-uit de database, producten printen in html, …
-– Let goed op welke functionaliteiten terugkomen
+– Letterlijk een scenario uitschrijven voor klant en voor admin
 
-Schrijf een schema uit voor de database
+- Teken een site map voor jouw webshop uit [https://www.gliffy.com/_ui/images/examples/example_sitemap_large.png]
 
-Maak mockups van hoe elke pagina er zal
-uitzien (bv. balsamiq, tekenen, …)
+- Beschrijf de functionaliteiten die nodig zijn voor elke pagina
+ - Bv. inlogfunctie, uitlogfunctie, producten ophalen uit de database, producten printen in html, …
+ - Let goed op welke functionaliteiten terugkomen (classes?)
 
-Leg de mockups voor aan iemand uit je omgeving en
-vraag om advies
-• Bepaal de technologie die je nodig hebt
-– Bv. CodeIgniter, Bootstrap, jQuery, …
-• Begin pas DAARNA aan design
-– Gebruik van CSS-framework zoals Bootstrap is aan te
-raden, maar niet verplicht
-– Zoek een goede balans tussen designen en coderen ->
-verspeel niet teveel tijd met het design. Functionaliteit
-primeert.
+- Schrijf een schema uit voor de database
 
-Leg het design voor aan iemand uit je omgeving en
-vraag om advies
-• Pas daarna beginnen met programmeren
-– Begin bij producten toevoegen/wijzigen pagina in adminmodule
-– Stap dan over naar het webshop gedeelte
-– Als dat klaar is kan het klant-gedeelte ingezet worden
-– Als laatste het bestellingsoverzicht voor de admin
-– Volg de stappen die een normale klant volgt en werk deze
-stappen programmatorisch chronologisch uit.
+- Maak mockups van hoe elke pagina er zal uitzien (bv. balsamiq, tekenen, …)
 
-Examen: voorstelling eindproef
-– Duurt maximum 15 á 20 minuten!
+- Leg de mockups voor aan iemand uit je omgeving en vraag om advies
+
+- Bepaal de technologie die je nodig hebt
+ - Bv. CodeIgniter, Bootstrap, jQuery, …
+
+- Pas na de bovenstaande stappen aan design beginnen
+
+- Gebruik van CSS-framework zoals Bootstrap/SASS/LESS is aan te raden, maar niet verplicht
+
+- Zoek een goede balans tussen designen en coderen -> verspeel niet teveel tijd met het design. Functionaliteit primeert.
+
+- Leg het design voor aan iemand uit je omgeving en vraag om advies
+
+- Pas daarna beginnen met programmeren
+ - Begin bij producten toevoegen/wijzigen pagina in adminmodule
+ - Stap dan over naar het webshop gedeelte
+ - Als dat klaar is kan het klant-gedeelte ingezet worden
+ - Als laatste het bestellingsoverzicht voor de admin
+
+- Volg de stappen die een normale klant volgt en werk deze stappen programmatorisch chronologisch uit.
+
+# Examen: voorstelling eindproef
+
+- Duurt maximum 15 á 20 minuten!
+
 – Korte intro ( presentatie! )
+
 – Live demonstratie van de webshop
+
 – Uitleg over de functionaliteiten
-– Focus op de dingen die werken
-• Niet: “Dit werkt wel nog niet, …”
 
-Examen: voorstelling eindproef
-– Leg de nadruk op wat je geleerd hebt
-• “Dit bleek eerst niet te werken, maar na opzoeking heb
-ik het zo en zo kunnen oplossen.”
-– TEST , TEST, TEST en herhaal de TEST
-• Falen tijdens een live demo is desastreus!
+– Focus op de dingen die werken (Niet: "Dit werkt wel nog niet", ...)
 
-Examen: voorstelling eindproef
-– Beoordeling:
-• Door 3 (misschien 4) juryleden:
-– Stefan
-– Pascal (/Sven)
-– Iemand uit het vakgebied
-• Minimumfunctionaliteit zoals beschreven in deze bundel (60%)
-– Correctheid van de code
-– Efficiëntie
-– Hoeveelheid van functionaliteiten
-– Eventuele extra functionaliteiten
-• Evolutie (10%)
-– Denkt na over methodiek
-– Doet onderzoek
-– Ziet eigen fouten in en verbeterd deze waar mogelijk
-– …
-• Permanente evaluatie doorheen de eindwerkbegeleiding (20%)
-• Presentatie + bundel (10%)
+- Leg de nadruk op wat je geleerd hebt ("Dit bleek eerst niet te werken, maar na opzoeking heb ik het zo en zo kunnen oplossen.", ...)
+
+- TEST , TEST, TEST en herhaal de TEST. Falen tijdens een live demo is desastreus!
+
+
+# Beoordeling:
+- Door enkele juryleden (waaronder Pascal)
+
+- Minimumfunctionaliteit zoals beschreven in dit document (60%)
+ - Correctheid van de code
+ - Efficiëntie
+ - Hoeveelheid van functionaliteiten
+ - Eventuele extra functionaliteiten
+
+- Evolutie (10%)
+ - Denkt na over methodiek
+ - Doet onderzoek
+ - Ziet eigen fouten in en verbeterd deze waar mogelijk
+ 
+- Permanente evaluatie doorheen de eindwerkbegeleiding (20%)
+
+- Presentatie + bundel (10%)
