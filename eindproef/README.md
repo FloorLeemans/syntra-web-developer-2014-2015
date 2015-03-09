@@ -145,10 +145,10 @@ Bundel en eindwerk worden digitaal afgeleverd
 
 # Strategie
 
-Onderzoek/laat je inspireren:
-- http://www.coolblue.be
-- http://www.bol.com
-- http://www.etsy.com
+- Onderzoek/laat je inspireren:
+ - http://www.coolblue.be
+ - http://www.bol.com
+ - http://www.etsy.com
 
 - Schrijf uit wat er op jouw webshop allemaal kan
 
