@@ -152,7 +152,7 @@ Onderzoek/laat je inspireren:
 
 - Schrijf uit wat er op jouw webshop allemaal kan
 
-– Letterlijk een scenario uitschrijven voor klant en voor admin
+- Letterlijk een scenario uitschrijven voor klant en voor admin
 
 - Teken een site map voor jouw webshop uit [https://www.gliffy.com/_ui/images/examples/example_sitemap_large.png]
 
@@ -189,13 +189,13 @@ Onderzoek/laat je inspireren:
 
 - Duurt maximum 15 á 20 minuten!
 
-– Korte intro ( presentatie! )
+- Korte intro ( presentatie! )
 
-– Live demonstratie van de webshop
+- Live demonstratie van de webshop
 
-– Uitleg over de functionaliteiten
+- Uitleg over de functionaliteiten
 
-– Focus op de dingen die werken (Niet: "Dit werkt wel nog niet", ...)
+- Focus op de dingen die werken (Niet: "Dit werkt wel nog niet", ...)
 
 - Leg de nadruk op wat je geleerd hebt ("Dit bleek eerst niet te werken, maar na opzoeking heb ik het zo en zo kunnen oplossen.", ...)
 
@@ -203,6 +203,7 @@ Onderzoek/laat je inspireren:
 
 
 # Beoordeling:
+
 - Door enkele juryleden (waaronder Pascal)
 
 - Minimumfunctionaliteit zoals beschreven in dit document (60%)
