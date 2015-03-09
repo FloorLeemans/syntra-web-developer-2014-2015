@@ -83,70 +83,62 @@ Na 26/3
 - Deze bestelling wordt ook aan de database toegevoegd(absolute minimum= datum,
 totaalprijs, unieke code , klant & status)
 
-Inloggen
-• Deze pagina bevat een inlogformulier
-• Wanneer de gebruiker nog geen account heeft, bestaat er de mogelijkheid om
-te registeren
-– Een klant heeft de volgende gegevens:
-» email
-» Naam
-» Voornaam
-» Telefoonnummer
-» Straat
-» Postcode
-» Gemeente
-» Land
-• Wanneer de gebruiker ingelogd is, wordt het navigatiemenu “inloggen”
-vervangen door “persoonlijke gegevens”
-– Dit verwijst naar een pagina met een overzicht van de persoonlijke gegevens van de klant
-– Op deze pagina kan een klant zijn gegevens wijzigen
+#### Inloggen (pagina)
+- Deze pagina bevat een inlogformulier
+- Wanneer de gebruiker nog geen account heeft, bestaat er de mogelijkheid om te registeren
+- Een klant heeft de volgende gegevens:
+ - Email
+ - Naam
+ - Voornaam
+ - Telefoonnummer
+ - Straat
+ - Postcode
+ - Gemeente
+ - Land
+- Wanneer de gebruiker ingelogd is, wordt het navigatiemenu "inloggen" vervangen door "persoonlijke gegevens"
+ - Dit verwijst naar een pagina met een overzicht van de persoonlijke gegevens van de klant
+ - Op deze pagina kan een klant zijn gegevens wijzigen
 
-Admin-pagina
-• Deze pagina is niet zichtbaar voor buitenstaanders
-(komt niet voor in navigatie-menu)
-• Een winkeleigenaar kan op deze pagina inloggen
-– Registratie hoeft niet
-• Op deze adminpagina komen de volgende
-functionaliteiten:
-– Product wijzigen
-– Product toevoegen
-– Bestellingen	
+#### Admin (pagina)
+- Deze pagina is niet zichtbaar voor buitenstaanders (komt niet voor in navigatie-menu)
+- Een winkeleigenaar kan op deze pagina inloggen
+- Registratie hoeft niet
+- Op deze adminpagina komen de volgende functionaliteiten:
+ - Product wijzigen
+ - Product toevoegen
+ - Bestellingen	
 
- Product wijzigen
-– Bevat dezelfde structuur als de publieke Product-pagina.
-– Detail-pagina is in dit geval niet nodig
-– Bij het overzicht van de producten per categorie, staat nu ook een knop
-“wijzigen”
-– Wanneer de winkeleigenaar op deze knop klikt, kan hij de gegevens van
-het product aanpassen
+##### Product wijzigen (admin-pagina)
+Bevat dezelfde structuur als de publieke Product-pagina.
+- Detail-pagina is in dit geval niet nodig
+- Bij het overzicht van de producten per categorie, staat nu ook een knop "wijzigen"
+- Wanneer de winkeleigenaar op deze knop klikt, kan hij de gegevens van het product aanpassen
 
-Product toevoegen
-– Bevat een formulier waarop een product toegevoegd kan worden
-– Een product heeft:
-» categorie
-» titel
-» foto
-» beschrijving
-» prijs
+##### Product toevoegen (admin-pagina)
+- Bevat een formulier waarop een product toegevoegd kan worden
+- Een product heeft:
+ - categorie
+ - titel
+ - foto
+ - beschrijving
+ - prijs
 
-Product wijzigen
-– Bevat een overzicht van alle bestellingen
-– Bestellingen bevatten minstens:
-» datum
-» Totaalprijs
-» unieke code
-» Klant
-» Status
-– De bestellingen zijn gerangschikt per status: besteld, betaald,
-verstuurd
-– De winkeleigenaar heeft de mogelijkheid om de bestelling van
-status te veranderen OF te verwijderen
+##### Product wijzigen (admin-pagina)
+- Bevat een overzicht van alle bestellingen
+- Bestellingen bevatten minstens:
+ - datum
+ - Totaalprijs
+ - unieke code
+ - Klant
+ - Status
+- De bestellingen zijn gerangschikt per status: besteld, betaald, verstuurd
+- De winkeleigenaar heeft de mogelijkheid om de bestelling van status te veranderen OF te verwijderen
 
-– Bundel en eindwerk worden digitaal afgeleverd
-• Bundel: digitaal formaat is voldoende
-• Webshop: alle code, inclusief correcte SQL-export
-• Mag op CD-Rom/USB/Dropbox-link
-– voorzie voor elk jury-lid een kopie (niets met doorgeven)
+Bundel en eindwerk worden digitaal afgeleverd
+- Bundel: digitaal formaat is voldoende
+- Webshop: alle code, inclusief correcte SQL-export
+- Mag op CD-Rom/USB/Dropbox-link
+- voorzie voor elk jury-lid een kopie (niets met doorgeven)
 
 
 Strategie
