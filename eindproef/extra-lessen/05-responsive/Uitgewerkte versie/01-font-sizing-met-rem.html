@@ -1,0 +1,79 @@
+<html>
+	
+	<head>
+		<title>Breaking Bad - font sizing met REM</title>
+
+		<style type="text/css">
+
+			html
+			{
+				font-size	:	62.5%; 
+				/* 
+					Standaard grootte	: 16px
+					Standaard font-size : 100%
+
+					Door de font-size op 62.5% te zetten, wordt de font size van 62.5% van 16px, dus 10px 
+					Dit is niet verplicht, maar rekent makkelijker
+					Bij een font-size van 62.5%:
+					bv. 	1rem 	= 	10px
+							1.6rem	=	16px
+					
+					Wanneer je 100% gebruikt is dit iets moeilijker om te zetten:
+					bv.		0.625rem	=	10px
+							1rem 		= 	16px 
+							
+					*/
+			}
+
+			body
+			{
+				margin		:	0;
+				background	:	url("bg.gif") no-repeat;
+				font-size	:	1.6rem;
+				font-family	:	sans-serif;
+			}
+
+			header
+			{
+				margin-top			:	500px;
+				padding				:	10px;
+				background-color	: 	#faea1b;
+				text-align			:	right;
+			}
+
+			header h1
+			{
+				margin			:	0;
+				font-size		:	3.6rem;
+				letter-spacing	:	-0.4rem;
+				text-transform	:	uppercase;
+			}
+
+			header h1 + span
+			{
+				font-size		:	1.2rem;
+				font-weight		:	bold;
+				text-transform	:	uppercase;
+			}
+
+			@media all and (min-width: 440px)
+			{
+				html
+				{
+					font-size	:	100%;
+				}
+			}
+
+		</style>
+	</head>
+
+	<body>
+		
+		<header>
+			<h1>Breaking Bad</h1>
+			<span>all hail the king</span>
+		</header>
+
+	</body>
+
+</html>

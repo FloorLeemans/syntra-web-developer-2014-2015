@@ -1,0 +1,122 @@
+<html>
+	
+	<head>
+		<title>Breaking Bad - flexible grid</title>
+
+		<style type="text/css">
+
+			html
+			{
+				font-size	:	62.5%;
+			}
+
+			body
+			{
+				margin		:	0;
+				background	:	url("bg.gif") no-repeat;
+				font-size	:	1.6rem;
+				font-family	:	sans-serif;
+			}
+
+			header
+			{
+				margin-top			:	500px;
+				padding				:	10px;
+				background-color	: 	#faea1b;
+				text-align			:	right;
+			}
+
+			header h1
+			{
+				margin			:	0;
+				font-size		:	3.6rem;
+				letter-spacing	:	-0.4rem;
+				text-transform	:	uppercase;
+			}
+
+			header h1 + span
+			{
+				font-size		:	1.2rem;
+				font-weight		:	bold;
+				text-transform	:	uppercase;
+			}
+
+			section
+			{
+				padding	:	10px;
+			}
+
+			.characters
+			{
+				margin-top		:	120px;
+				padding			:	0;
+				list-style-type	: 	none;
+			}
+
+
+			.characters h1
+			{
+				margin-top		:	0;
+				border-top		:	4px solid black;
+				text-transform	:	uppercase;
+			}
+
+
+			@media all and (min-width: 440px)
+			{
+				html
+				{
+					font-size	:	100%;
+				}
+			}
+
+			@media all and (min-width: 500px)
+			{
+				html
+				{
+					font-size	:	75%;
+				}
+
+				.characters li
+				{
+					float	:	left;
+					width	:	29.3%;
+					margin	:	2%;
+					/*
+						Omdat het box-model als totale breedte margin + border + padding + breedte neemt, moeten we de breedte aanpassen in functie van de margin/padding/border
+
+						Wanneer de padding/margin/border niet procentueel mag zijn (dus in pixels), kan je best gebruik maken van de box-sizing:border-box property, maar de cross-browserondersteuning laat nog te wensen over
+
+						Meer info: 
+							- http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+							- http://www.css-tricks.com/box-sizing/
+					*/
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<header >
+			<h1>Breaking Bad</h1>
+			<span>all hail the king</span>
+		</header>
+
+		<section>
+			<ul class="characters">
+				<li>
+					<h1>Pinkman</h1>
+				</li>
+				<li>
+					<h1>Gus</h1>
+				</li>
+				<li>
+					<h1>Mike</h1>
+				</li>
+			</ul>
+		</section>
+
+	</body>
+
+</html>

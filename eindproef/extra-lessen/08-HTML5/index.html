@@ -1,0 +1,811 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="HTML5 Introductie">
+        <meta name="viewport" content="width=device-width<li>initial</li>
+        -scale=1">
+        <title>HTML5 Crash course</title>
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/global.css">
+    </head>
+    <body>
+
+		<header>
+			 <h1>HTML5 crash course</h1>
+		</header>
+
+		<section>
+			
+			<h2>Intro</h2>
+
+			<p>Deze crash course heeft als doel je snel op weg te helpen met HTML5. Uiteraard is HTML5 enorm uitgebreid en is dit slechts een het tipje van de ijsberg die HTML5 te bieden heeft.</p>
+
+			<h3>Werkt altijd</h3>
+
+			<p>HTML5 <i>degrades gracefully</i>, dat wil zeggen dat browsers die HTML niet kennen, het document toch nog kunnen renderen. Dat is de basisfilosofie van HTML5: don't break stuff.</p>
+
+			<h3>Geen uppercase/lowercase conventies</h3>
+
+			<p>Vooral bij oudere HTML-documenten zie je sommige elementen in hoofdletters staan:</p>
+
+			<p><pre>&lt;SPAN&gt;tekst&lt;/SPAN&gt;</pre></p>
+
+			<p>In sommige versies van HTML was dit verplicht, in andere mocht het niet. HTML5 is hier duidelijk in: je mag zelf kiezen. Je mag hoofdletters en kleine letters zelfs mengen, al is dat niet meteen een best practice.</p>
+
+			<h3>Semantiek &gt; layout</h3>
+
+			<p>Elementen die gebruikt werden om de layout aan te passen en dus geen semantische betekenis hebben, worden afgeraden om te gebruiken. Het gaat hier om <code><font face="Comic Sans MS">&lt;font&gt;</font></code>, <code><big>&lt;big&gt;</big></code>, <code><strike>&lt;strike&gt;</strike></code> en <code><center>&lt;center&gt;</center></code></p>
+
+			<p>Deze kan je makkelijk vervangen door CSS-eigenschappen.</p>
+
+			<p>Soms lijken er inconsistenties, zo mag <code>&lt;small&gt;</code> nog wel. Maar, de betekenis van het element is veranderd. <code>&lt;small&gt;</code> wordt gebruikt om aan te duiden dat deze tekst <em>small print</em> is. Bijvoorbeeld de disclaimer bij deze Superman onesie:</code></p>
+
+			<section class="example">
+
+				<figure>
+					<img class="width-300" img src="img/superman-onesie.jpg" alt="Superman onesie">
+					<figcaption><small>Disclaimer: letting your baby wear this does not give him/her ability to fly.</small></figcaption>
+				</figure>
+
+				<pre>&lt;small&gt;Disclaimer: letting your baby wear this does not give him/her ability to fly.&lt;/small&gt;</pre>
+
+			</section>
+
+			<p>Er is ook wat verwarring rond <code>&lt;i&gt;</code>, <code>&lt;em&gt;</code> en <code>&lt;strong&gt;</code></p>
+
+			<p>Gebruik <code>&lt;em&gt;</code> om de nadruk op iets te leggen.</p>
+
+			<section class="example">
+
+				<p>letting your baby wear this does <em>not</em> give him/her ability to fly.</p>
+
+				<pre>letting your baby wear this does <span class="b">&lt;em&gt;not&lt;/em&gt;</span> give him/her ability to fly.</pre>
+				
+			</section>
+
+			<p>Gebruik <code>&lt;i&gt;</code> om de toon van een woord te veranderen. Bijvoorbeeld wanneer je iets ironisch bedoeld:</p>
+
+			<section class="example">
+				
+				<figure>
+					<img class="width-300" src="img/dr-evil.jpg" alt="Dr Evil">
+					<figcaption>HTML5 is waanzinnig "<i>moeilijk</i>"</figcaption>
+				</figure>
+
+				<pre>HTML5 is waanzinnig "<span class="b">&lt;i&gt;moeilijk&lt;/i&gt;</span>"</pre>
+
+			</section>
+				
+	
+			<p>Gebruik <code>&lt;strong&gt;</code> om iets als extra belangrijk aan te duiden.</p>
+
+			<section class="example">
+	
+				<p>Voor het examen moeten jullie geen HTML5 kennen, maar wel <strong>de werking van een deeltjesversneller</strong>.</p>
+
+				<pre>Voor het examen moeten jullie geen HTML5 kennen, maar wel <span class="b">&lt;strong&gt;de werking van een deeltjesversneller&lt;/strong&gt;</span>.</pre>
+
+			</section>
+
+			<p>Moraal van het verhaal: gebruik HTML5 elementen énkel als er een semantische betekenis bij komt kijken, om de layout te veranderen gebruik je CSS.</p>
+
+		</section>
+
+		<section>
+			
+			<h2>KISS</h2>
+
+			<p>Keep It Simple, Stupid. Er zijn een heleboel vereenvoudigingen in HTML5</p>
+
+			<h3>Doctype</h3>
+
+			<p>Moet bovenaan elke HTML-pagina en vertelt de browser om welk type HTML het gaat.Voordien was dit een stevige brok code die niemand van buiten kende. Hier zien we een doctype voor HTML 4.01:</p>
+
+			<p><pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</pre></p>
+
+			<p>Met HTML5 is dit een pak eenvoudiger:</p>
+
+			<p><pre>&lt;!DOCTYPE html&gt;</pre></p>
+
+			<h3>Character encoding</h3>
+
+			<p>Ook wel <em>charset</em> genaamd. Vertelt de browser hoe de bits van een bestand naar welke karakters moeten omgezet worden. Er zijn verschillende <em>charsets</em></p>
+
+			<ul>
+				<li>ASCII (7-bit) : 128 karakters</li>
+				<li>ANSI (8-bit) : 256 karakters</li>
+				<li>UTF8 (min: 1byte, max 4 byte) : maximum 4 294 967 296 karakters</li>
+				<li>...</li>
+			</ul>
+
+			<p>Dus hoe meer bits, hoe meer karakters, hoe meer talen er ondersteund kunnen worden. UTF-8 is ondertussen een van de meest gebruikte internationale charsets.</p>
+
+			<p>Pre-HTML was dit de notatie om een charset te bepalen:</p>
+
+			<p><pre>&lt;meta <span class="b">http-equiv="Content-Type" content="text/html;</span> charset=UTF-8"&gt;</pre></p>
+
+			<p>En hier is de vereenvoudigde HTML5-versie:</p>
+
+			<p><pre>&lt;meta charset="UTF-8"&gt;</pre></p>
+
+			<h3>Script</h3>
+
+			<p>Ooit al front-end scripting gezien in een andere taal dan JavaScript?</p>
+			
+			<p><pre>&lt;script <span class="b">type="text/javascript"</span> src="file.js"&gt;&lt;/script&gt;</pre></p>
+
+			<p>Voor browsers bestaat er geen ander scripting-taal dan JavaScript, dus maakt HTML5 het wat simpeler:</p>
+		
+			<p><pre>&lt;script src="file.js"&gt;&lt;/script&gt;</pre></p>
+
+			<h3>Link</h3>
+
+			<p>Om naar stylesheet te linken moest je voordien vermelden om welk type het ging, hoewel dit al in de relatie vermeld werd: </p>
+			
+			<p><pre>&lt;link rel="stylesheet" <span class="b">type="text/css"</span> href="file.css"&gt;</pre></p>
+
+			<p>HTML5 maakt komaf met deze overkill:</p>
+		
+			<p><pre>&lt;link rel="stylesheet" href="file.css"&gt;</pre></p>
+
+			<h3>Simpele singletons</h3>
+
+			<p>Een singleton element is een element dat geen closing-tag bevat, zoals <code>&lt;input&gt;</code>, <code>&lt;hr&gt;</code>en het vaak misbruikte <code>&lt;br&gt;</code></p>
+
+			<p>Vroeg moesten deze elementen met een trailing slash (bv. <code>&lt;hr <span class="b">/</span>&gt;</code>) worden afgesloten. In HTML5 zijn deze optioneel en is het zelfs eenvoudiger om ze niet meer te schrijven.</p>
+
+		</section>
+
+
+		<section>
+			
+			<h2>Formulieren</h2>
+
+			<p>Er zijn een heleboel nieuwe attributen bijgekomen die de verwerking en validatie van formulieren vereenvoudigt. Zo doen browsers nu wat vroeger enkel via JavaScript kon.</p>
+			
+			<p>Attributen die geen waarde hebben, zoals bv. <code>selected</code>, <code>autofocus</code>, ... moeten dus ook geen waarde toegekend worden, zoals soms wel eens gebeurde voor HTML5: <code>selected<span class="line">="selected"</span></code>.</p>
+
+			<h3>Placeholder</h3>
+
+			<p>Wanneer een inputveld geen waarde heeft, kan je door middel van het <code>placeholder=""</code>-attribuut er een waarde in plaatsen die verdwijnt wanneer je het inputveld selecteert, bv:</p>
+
+			<section class="example">
+
+				<label for="naam-01">Hoe heet je?</label>
+				<input type="text" id="naam-01" placeholder="bv. Olaf">
+				
+				<pre>&lt;input type="text" <span class="b">placeholder="bv. Olaf"</span>&gt;</pre>
+			
+			</section>
+
+			<h3>Autofocus</h3>
+
+			<p>Wanneer een pagina geladen is, kan je automatisch de focus op een bepaald input-veld plaatsen doormiddel van het <code>autofocus</code>-attribuut. Zo kan je onmiddellijk beginnen typen. Denk aan de Google searchbar. Let op: je kan uiteraard maar één autofocus per pagina instellen en van zodra de bezoeker ergens anders klikt verdwijnt de focus.</p>
+
+			<section class="example">
+
+				<label for="titel-01">Titel: </label>
+				<input type="text" id="titel-01" .autofocus>
+				
+				<pre>&lt;input type="text" <span class="b">autofocus</span>&gt;</pre>
+			
+			</section>
+
+			<p>Noot: deze autofocus staat op off omdat anders bij het laden van het document je telkens op dit veld zou terecht komen in plaats van bij het begin.</p>
+
+			<h3>Required</h3>
+
+			<p>Wanneer dit attribuut op een inputveld wordt toegepast, zal de browser valideren of het ingevuld is. Als het leeg is, toont de browser een foutmelding. Probeer het onderstaande formulier te submitten zonder iets in te vullen:</p>
+
+			<section class="example">
+
+				<form>
+					<label for="naam-02">Zoeken: </label>
+					<input type="text" id="naam-02" required>
+					<input type="submit">
+				</form>	
+			
+				<pre>&lt;input type="text" <span class="b">required</span>&gt;</pre>
+			
+			</section>
+
+			<h3>Autocomplete</h3>
+
+			<p>Browsers kunnen data die de gebruiker heeft ingevuld en doorgestuurd onthouden om deze daarna automatisch weer in te vullen wanneer hij een tijdje later dezelfde pagina bezoekt. Vaak is dit handig, maar soms kan dit ook gevaarlijk zijn, bv. bij gevoelige informatie zoals paswoorden en bankgegevens.</p>
+
+			<p>Standaard zet HTML5 een formulier op <code>autocomplete="on"</code>, dus als je dit wil vermijden moet je dit expliciet vermelden met <code>autocomplete="off"</code>. Dit kan op twee elementen: het formulier, dan zal geen enkel inputveld dat in het formulier zit automatisch ingevuld worden</p>
+			
+			<pre>&lt;form action="/send" <span class="b">autocomplete="off"</span>&gt;
+	...
+&lt;/form&gt;</pre>
+
+			<p>Of op een individueel inputveld:</p>
+
+			<pre>&lt;input type="text" <span class="b">autocomplete="off"</span>&gt;</pre>
+
+			<h3>Input types</h3>
+
+			<p>HTML5 biedt een heleboel nieuwe input-types met elk hun eigen layout en functie waarbij vooral de de usability voor mobiele gebruikers in acht wordt genomen. Dat wil zeggen dat de layout ook afhankelijk is van browser tot browser.</p>
+
+			<h3>type="search"</h3>
+
+			<p>Voor zoekvelden. Toont een kruisje rechts van het zoekveld waarmee je het veld in één klik kan leegmaken.</p>
+
+			<section class="example">
+				
+				<input type="search" placeholder="vul iets in om kruisje te zien">
+				
+				<pre>&lt;input type="<span class="b">search</span>"&gt;</pre>
+			</section>
+
+
+			<h3>type="email"</h3>
+
+			<p>Controleert of het input-veld een geldig e-mailadres bevat wanneer de gebruiker het formulier verstuurt.</p>
+
+			
+			<section class="example">
+		
+				<form>
+					<input type="email" placeholder="vul ongeldig e-mailadres in">
+					<input type="submit">
+				</form>
+
+				<pre>&lt;input type="<span class="b">email</span>"&gt;</pre>
+			
+			</section>
+
+			<p>Voor mobiele gebruikers zal dit ook een toetsenbord oproepen waar automatisch de <kbd>@</kbd> key beschikbaar is.</p>
+
+			<figure>
+				<img src="img/input-email.jpg" alt="Keyboard input type=\"email\"">
+				<figcaption>Keyboard input type email</figcaption>
+			</figure>
+
+			<h3>type="url"</h3>
+
+			<p>Controleert of het input-veld een geldige url bevat wanneer de gebruiker het formulier verstuurt.</p>
+
+			
+			<section class="example">
+				
+				<form>
+					<input type="url" placeholder="vul ongeldige url in">
+					<input type="submit">
+				</form>
+
+				<pre>&lt;input type="<span class="b">url</span>"&gt;</pre>
+			</section>
+
+			<p>Voor mobiele gebruikers zal dit ook een toetsenbord oproepen waar automatisch de <kbd>.</kbd>, <kbd>/</kbd> en <kbd>.com</kbd>, keys beschikbaar zijn.</p>
+
+			<figure>
+				<img src="img/input-url.jpg" alt="Keyboard input type=\"url\"">
+				<figcaption>Keyboard input type URL</figcaption>
+			</figure>
+
+
+			<h3>type="tel"</h3>
+
+			<p>Dit valideert <strong>niet</strong> of het input-veld een geldig telefoonnummer is, maar roept het numerieke toetsenbord op voor mobiele gebruikers</p>
+
+			
+			<section class="example">
+			
+				<form>
+					<input type="tel" placeholder="vul telefoonnummer in">
+					<input type="submit">
+				</form>
+			
+				<pre>&lt;input type="<span class="b">tel</span>"&gt;</pre>
+
+			</section>
+
+			<p>Mobiele gebruikers krijgen een soortgelijk toetsenbord te zien</p>
+
+			<figure>
+				<img src="img/input-tel.jpg" alt="Keyboard input type=\"tel\"">
+				<figcaption>Keyboard input type tel</figcaption>
+			</figure>
+
+
+
+			<h3>type="range"</h3>
+
+			<p>Toont een slider waarvan standaard het minimum 1 en het maximum 100 is en de slider automatisch in het midden van deze waardes wordt gezet.</p>
+			
+			<section class="example">
+			
+				<input type="range" value="" onchange="alert( 'Waarde van deze slider is ' + this.value )">
+
+				<pre>&lt;input type="<span class="b">range</span>"&gt;</pre>
+			</section>	
+
+			<p>Met een beginwaarde van 20:</p>
+
+			
+			<section class="example">
+
+				<input type="range" value="20" onchange="alert( 'Waarde van deze slider is ' + this.value )">
+			
+				<pre>&lt;input type="range" <span class="b">value="20"</span>&gt;</pre>
+			
+			</section>
+
+			<p>Met andere minimum- en maximumwaarden:</p>
+
+			<section class="example">
+
+				<input type="range" min="2000" max="4000" onchange="alert( 'Waarde van deze slider is ' + this.value )">
+			
+				<pre>&lt;input type="range" <span class="b">min="2000" max="4000"</span>&gt;</pre>
+			
+			</section>
+
+			<h3 id="type-number">type="number"</h3>
+
+			<p>Aan een <code>type="number"</code> wordt automatisch een spinner toegevoegd, een iconset waarmee je een getal kan optellen of aftrekken.</p>
+
+			<section class="example">
+
+				<input type="number">
+			
+				<pre>&lt;input type="<span class="b">number</span>"&gt;</pre>
+			
+			</section>
+
+			<p>Ook op dit element kan een <code>range</code> ingesteld worden. Vergeet de value niet op te geven, anders zal de beginwaarde van de input leeg zijn.</p>
+
+			<section class="example">
+
+				<input type="number" value="10" min="10" max="50">
+			
+				<pre>&lt;input type="number" <span class="b">value="10" min="10" max="50"</span>&gt;</pre>
+			
+			</section>
+
+		
+			<h3 id="type-date">type="date"</h3>
+
+			<p>Een <code>type="date"</code> krijgt automatisch een date-picker toegewezen en wordt in het formaat dd/mm/jjjj geschreven</p>
+
+			<section class="example">
+
+				<input type="date">
+			
+				<pre>&lt;input type="<span class="b">date</span>"&gt;</pre>
+			
+			</section>
+
+			<p>Er zijn verschillende andere <code>type="date"</code>s, maar let op: afhankelijk van de tijdszone waarin de browser is ingesteld kan de volgorde, het formaat en de taal van de datum-aanduiding verschillend zijn.</p>
+
+			<h3 id="type-datetime-local">type="datetime-local"</h3>
+
+			<p>Formaat: dd/mm/jjjj uu:mm</p>
+
+			<p>Opgelet: <code>type="datetime"</code> zou niet meer ondersteund worden, enkel nog <code>type="datetime-local"</code>.</p>
+
+			<section class="example">
+
+				<input type="datetime-local">
+			
+				<pre>&lt;input type="<span class="b">datetime-local</span>"&gt;</pre>
+			
+			</section>
+
+			<h3 id="type-time">type="time"</h3>
+
+			<p>Formaat: uu:mm</p>
+
+			<section class="example">
+
+				<input type="time">
+			
+				<pre>&lt;input type="<span class="b">time</span>"&gt;</pre>
+			
+			</section>
+
+			<h3 id="type-month">type="month"</h3>
+
+			<p>Formaat: maand jjjj</p>
+
+			<section class="example">
+
+				<input type="month">
+			
+				<pre>&lt;input type="<span class="b">month</span>"&gt;</pre>
+			
+			</section>
+
+			<h3 id="type-week">type="week"</h3>
+
+			<p>Formaat: Week ww, jjjj</p>
+
+			<section class="example">
+
+				<input type="week">
+			
+				<pre>&lt;input type="<span class="b">week</span>"&gt;</pre>
+			
+			</section>
+
+
+			<h3 id="type-pattern">type="pattern" (Regular Expressions)</h3>
+
+			<p>Voor wie nog meer flexibiliteit wil is er het pattern-type, waarmee je zelf je patroon kan samenstellen om een bepaald inputveld te valideren. Hiervoor moet je wel regular expressions kennen, maar vaak vind je op het internet copy-pastebare oplossingen voor het merendeel van de datatypes</p>
+
+			<section class="example">
+
+				<form action="\send">
+					
+					<label for="postcode">Postcode:</label>
+					<input pattern="[\d]{4}" id="postcode" placeholder="vul wat letters in">
+
+					<input type="submit">
+				</form>
+			
+				<pre>&lt;input <span class="b">pattern="[\d]{4}"</span>&gt;</pre>
+			
+			</section>
+
+			<p><code>[\d]{4}</code> is een regular expression die een match oplevert voor 4 achtereenvolgende getallen.</p>
+
+			<h3 id="type-color">type="color"</h3>
+
+			<p>Een color-type toont een colorpicker en zal een hexadecimale kleurwaarde teruggeven. Standaard staat de kleur op de waarde #000000, puur zwart.</p>
+
+			<section class="example">
+
+				<input type="color">
+			
+				<pre>&lt;input type="<span class="b">color</span>"&gt;</pre>
+			
+			</section>
+
+		
+		</section>
+
+		<section>
+
+			<h2 id="nieuwe-elementen">nieuwe elementen</h2>
+
+			<p>De focus van de nieuwe elementen in HTML5 ligt vooral op de <em>semantiek</em>, dat wil zeggen dat deze elementen iets meer vertellen over de functie of hiërarchie van een woord of een tekst in het geheel.</p>
+
+			<h3 id="element-mark">&lt;mark&gt;</h3>
+
+			<p>Dit element vestigt de aandacht op iets wat belangrijk is voor iemand die iets zoekt, bv. om een zoektermen in een stukje tekst aan te duiden.</p>
+
+			<section class="example">
+
+				<p>Zoekresultaten voor "HTML5"</p>
+			
+				<ol>
+					<li>
+						<a href="#element-mark">De voordelen van HTML5</a>
+						<p>Waarom zou je overstappen op <mark>HTML5</mark>? Welke voordelen biedt <mark>HTML5</mark> in vergelijking met zijn voorgangers?</p>
+					</li>
+				</ol>
+
+				<pre>&lt;p&gt;Waarom zou je overstappen op <span class="b">&lt;mark&gt;HTML5&lt;/mark&gt;</span>? Welke voordelen biedt <span class="b">&lt;mark&gt;HTML5&lt;/mark&gt;</span> in vergelijking met zijn voorgangers?&lt;/p&gt;</pre>
+			
+			</section>
+
+			<h3 id="element-time">&lt;time&gt;</h3>
+
+			<p>Dit element zorgt ervoor dat een tijdsaanduiding makkelijk geïnterpreteerd kan worden door zowel mensen als computers. In de element value,dat wat <em>tussen</em> de opening en closing tag staat, komt de datum voor mensen, in het datetime-attribuut komt de datum volgens de HTML5 conventie</p>
+
+			<section class="example">
+
+				<time datetime="2020-02-05">5 februari 2020</time>
+
+				<pre>&lt;time datetime="2020-02-05"&gt;5 februari 2020&lt;/time&gt;</pre>
+			
+			</section>
+
+			<p>Opgelet, datetime is onafhankelijk van de locatie en moet dus in het formaat JJJJ-MM-DD geschreven worden.</p>
+
+
+			<h3 id="element-meter">&lt;meter&gt;</h3>
+
+			<p>Dit element heeft per se iets met afstand te maken, maar wel met de hoeveelheid van iets. Hier zijn minstens het <code>value</code> en het <code>max</code> attribuut nodig. In de element value kan eventueel een beschrijvende tekst komen.</p>
+
+			<section class="example">
+
+				<meter value="3.5" max="20">3.5 TB van 20TB beschikbaar</meter>
+
+				<pre>&lt;meter value="3.5" max="20"&gt;3.5 TB van 20TB beschikbaar&lt;/meter&gt;</pre>
+			
+			</section>
+
+			<p>Deze tekst wordt enkel getoond wanneer de browser geen HTML5 herkent en is een mooi voorbeeld van <em>graceful degradation</em>. je kan dit element nog eindeloos tweaken en er zijn ook interessante layouts in samenwerking met CSS <code>::before</code> en <code>::after</code> elementen. Bekijk de mogelijkheden op <a href="http://css-tricks.com/html5-meter-element/">CSS-tricks: meter element</a>.</p>
+			
+
+			<h3 id="element-progress">&lt;progress&gt;</h3>
+
+			<p>Dit element lijkt op meter, maar duidt aan hoever bepaalde vorderingen staan.</p>
+
+			<section class="example">
+
+				loading: <progress value="75" max="100">75% klaar</progress>
+
+				<pre>loading: &lt;progress value="75" max="100"&gt;75% klaar&lt;/progress&gt;</pre>
+			
+			</section>		
+
+
+			<h3 id="element-section">&lt;section&gt;</h3>
+
+			<p>Dit element zal de functie van een <code>&lt;div&gt;</code> steeds vaker overnemen. Het bundelt stukjes tekst die samenhoren. Het verschil met een <code>&lt;div&gt;</code> is dat een <code>&lt;section&gt;</code> laat weten dat alles wat zich binnen dit element bevindt, samenhoort.</p>
+
+			<section class="example">
+
+				<section>
+					<h1>HTML5 for webdesigners</h1>
+					<p>Uitgever: A Book Apart</p>
+					<p>Samenvatting: HTML5 for Web Designers is 85 pages and fun to read. Easy choice.</p>
+				</section>
+
+				<pre><span class="b">&lt;section&gt;</span>
+	&lt;h1&gt;HTML5 for webdesigners&lt;/h1&gt;
+	&lt;p&gt;Uitgever: A Book Apart&lt;/p&gt;
+	&lt;p&gt;Samenvatting: HTML5 for Web Designers is 85 pages and fun to read. Easy choice.&lt;/p&gt;
+<span class="b">&lt;/section&gt;</span></pre>
+			
+			</section>
+
+
+			<h3 id="element-nav">&lt;nav&gt;</h3>
+
+			<p>Het <code>&lt;nav&gt;</code> element spreekt voor zich: hierin komen alle elementen die instaan voor de navigatie.</p>
+
+			<section class="example">
+
+					<nav>
+						<ul>
+							<li><a href="#">Over</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+
+				<pre><span class="b">&lt;nav&gt;</span>
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Over&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+<span class="b">&lt;/nav&gt;</span></pre>
+			
+			</section>
+
+			<p>Dit element gaat vaak gepaard met het <code><a href="#element-header">&lt;header&gt;</a></code> element</p>
+
+
+			<h3 id="element-header">&lt;header&gt;</h3>
+
+			<p>Het <code>&lt;header&gt;</code> element wordt omschreven als <em>een verzameling waarvan de elementen dienen tot inleiding of navigatie</em>. Niet te verwarren met het  <code>&lt;head&gt;</code> element, dat boven elke body komt en waarin zogenaamde <em>metadata</em> zoals title, charset, css, ... komt te staan.</p>
+
+			<section class="example">
+
+				<section>
+					<header>
+						<h1>HTML5 for webdesigners</h1>
+					</header>
+					<p>Uitgever: A Book Apart</p>
+					<p>Samenvatting: HTML5 for Web Designers is 85 pages and fun to read. Easy choice.</p>
+				</section>
+
+				<pre>&lt;section&gt;
+	<span class="b">&lt;header&gt;</span>
+		&lt;h1&gt;HTML5 for webdesigners&lt;/h1&gt;
+	<span class="b">&lt;/header&gt;</span>
+	&lt;p&gt;Uitgever: A Book Apart&lt;/p&gt;
+	&lt;p&gt;Samenvatting: HTML5 for Web Designers is 85 pages and fun to read. Easy choice.&lt;/p&gt;
+&lt;/section&gt;</pre>
+			
+			</section>
+
+			<p>Interessant bij het <code>&lt;header&gt;</code> element is dat de <code>&lt;h&gt;</code>-structuur gereset wordt. Zo mag je in elke header met een &lt;h1&gt; beginnen en hoef je niet te volgen op de buitenliggende volgorde.</p>
+
+			<p>Dit element wordt dus ook vaak voor navigatie gebruikt:</p>
+
+
+			<section class="example">
+
+				<header>
+					<nav>
+						<ul>
+							<li><a href="#">Over</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+				</header>
+
+				<pre><span class="b">&lt;header&gt;</span>
+	&lt;nav&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Over&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/nav&gt;
+<span class="b">&lt;/header&gt;</span></pre>
+			
+			</section>
+
+			<h3 id="element-hgroup">&lt;hgroup&gt;</h3>
+
+			<p>Wordt gebruikt wanneer je een groep van titels hebt die in feite samenhoren, zoals een titel en een subtitel. Dit zorgt ervoor dat alle titels dezelfde inspringing krijgen.</p>
+
+			<section class="example">
+
+				<hgroup>
+					<h1>Peter Pan</h1>
+					<h2>or, The Boy Who Wouldn’t Grow Up</h2>
+				</hgroup>
+
+				<pre>&lt;hgroup&gt;
+	&lt;h1&gt;Peter Pan&lt;/h1&gt;
+	&lt;h2&gt;or, The Boy Who Wouldn’t Grow Up&lt;/h2&gt;
+&lt;/hgroup&gt;</pre>
+
+			</section>
+
+			<h3 id="element-footer">&lt;footer&gt;</h3>	
+
+			<p>Het <code>&lt;footer&gt;</code> element wordt niet gebruikt om informatie aan te duiden die onderaan een sectie komt. Een footer heeft een veel specifiekere functie: het bevat alle informatie over die bepaalde sectie, zoals de auteur, copyright, links naar gerelateerde content, ... Het vertelt iets meer over hoe de bovenstaande tekst tot stand is gekomen, en niets over de inhoud van de tekst zelf.</p>
+
+
+			<section class="example">
+
+				<section>
+					<header>
+						<h1>HTML5 for webdesigners</h1>
+					</header>
+					<p>Uitgever: A Book Apart</p>
+					<p>Samenvatting: HTML5 for Web Designers is 85 pages and fun to read. Easy choice.</p>
+					<p>Auteur: Jeremy Keith</p>
+					<footer>
+						<p><a href="#">Lees meer...</a></p>
+						<p>Review door: Jeffrey Zeldman</p>
+					</footer>
+				</section>
+
+				<pre>&lt;section&gt;
+	&lt;header&gt;
+		&lt;h1&gt;HTML5 for webdesigners&lt;/h1&gt;
+	&lt;/header&gt;
+	&lt;p&gt;Uitgever: A Book Apart&lt;/p&gt;
+	&lt;p&gt;Samenvatting: HTML5 for Web Designers is 85 pages and fun to read. Easy choice.&lt;/p&gt;
+	&lt;p&gt;Auteur: Jeremy Keith&lt;/p&gt;
+	<span class="b">&lt;footer&gt;</span>
+		&lt;p&gt;&lt;a href="#"&gt;Lees meer...&lt;/a&gt;&lt;/p&gt;
+		&lt;p&gt;Review door: Jeffrey Zeldman&lt;/p&gt;
+	<span class="b">&lt;/footer&gt;</span>
+&lt;/section&gt;</pre>
+			
+			</section>
+
+			<h3 id="element-aside">&lt;aside&gt;</h3>
+
+			<p>Bij het &lt;aside&gt; element is het niet de positie die van belang is. Een navigatie-item aan de rechter- of linkerkant van een pagina komt niet in aanmerking. Bij HTML5 draait het zoals gewoonlijk om de semantiek, de inhoud, en niet de positie waar iets zich bevindt.</p>
+
+			<p>&lt;aside&gt; wordt aanschouwd als een element om iets extra te vertellen over de inhoud van een bepaald deel.</p>
+
+			<section class="example">
+
+				<section>
+					<header>
+						<h1>De evolutietheorie</h1>
+					</header>
+					<p>De evolutietheorie is de natuurwetenschappelijke verklaring voor de evolutie van het leven en voor de verscheidenheid aan soorten op Aarde.</p>
+
+					<aside>Deze theorie werd voor het eerst beschreven door Charles Robert Darwin. Hij was een Engels autodidact op het gebied van natuurlijke historie, biologie en geologie.</aside>
+				</section>
+
+				<pre>&lt;section&gt;
+	&lt;header&gt;
+		&lt;h1&gt;De evolutietheorie&lt;/h1&gt;
+	&lt;/header&gt;
+	&lt;p&gt;De evolutietheorie is de natuurwetenschappelijke verklaring voor de evolutie van het leven en voor de verscheidenheid aan soorten op Aarde.&lt;/p&gt;
+
+	<span class="b">&lt;aside&gt;</span>Deze theorie werd voor het eerst beschreven door Charles Robert Darwin. Hij was een Engels autodidact op het gebied van natuurlijke historie, biologie en geologie.<span class="b">&lt;/aside&gt;</span>
+&lt;/section&gt;</pre>
+
+			</section>
+
+			<h3 id="element-article">&lt;article&gt;</h3>
+
+			<p>Het <code>&lt;article&gt;</code> element is de lastigste van de elementen, omdat het erg veel overeenstemming heeft met een <code>&lt;section&gt;</code> element. Het wordt meestal gebruikt voor blogposts, nieuwsartikels, comments, forumposts, reviews waardoor er nog maar weinig over is voor<code> &lt;section&gt;</code> om inhoudelijke elementen te bundelen. En, je mag een <code>&lt;article&gt;</code> ook gebruiken voor zogenaamde <em>widgets</em>, bv. eeneen beursgrafiekje, een twitterfeed.</p>
+
+
+			<h2>Ondersteuning</h2>
+
+			<p>HTML5 wordt niet door oudere browsers ondersteund. HTML5 volledig ondersteunen in deze browsers is moeilijk, maar wat we wel kunnen doen is ervoor zorgen dat de website functioneert, al dan niet met de HTML5 functionaliteit, zolang de gebruiker ongeacht welke browsertechnologie hij gebruikt, maar ongehinderd kan surfen.</p>
+
+			<h3 id="support-css">CSS</h3>
+
+			<p>Sommige browsers zullen elementen die ze niet herkennen geen standaard opmaak geven. Daarom is het belangrijk wanneer je met HTML5 werkt, de volgende CSS-code toe te voegen:</p>
+
+			<pre>section, article, header, footer, nav, aside, hgroup {
+	display: block;
+}</pre>
+			
+			<p>Wanneer je een <a href="http://meyerweb.com/eric/tools/css/reset/">reset.css</a> of <a href="http://necolas.github.io/normalize.css/">normalize.css</a> gebruikt zit deze property-definitie er al standaard in verwerkt.</p>
+
+			<h3 id="support-js">JavaScript</h3>
+
+			<p>Oude versies van Internet Explorer zullen geen elementen herkennen die niet voorgedefinieerd zijn. Dit wil zeggen dat je voordat de &lt;body&gt; geladen wordt, je alle gebruikte HTML5 elementen eerst via JavaScript moet definiëren.</p>
+
+			<pre>document.createElement('section');</pre>
+
+			<p>Gelukkig heeft iemand hier een script voor geschreven dat enkel geladen wordt wanneer de browser Internet Explorer is en dat het predefiniëren van deze elementen voor zijn rekening neemt:</p>
+
+			<pre>&lt;!--[if IE]&gt;
+ &lt;script src= »
+ "http://html5shiv.googlecode.com/svn/trunk/html5.js"&gt;
+ &lt;/script&gt;
+&lt;![endif]--&gt;</pre>
+
+			<!--<h3>&lt;canvas&gt;</h3>
+
+			<p>Met het &lt;canvas&gt; element kan je via JavaScript 2D en 3D afbeeldingen maken. Dit moet de cross-browser en onafhankelijke vervanger van Adobe Flash worden.</p>
+
+			<p>Een bekend 2D voorbeeld is <a href="http://chrome.angrybirds.com/">Angry Birds</a>, en nog indrukwekkender is de 3D <a href="http://quake2playn.appspot.com/">Quake 2 port</a> die toont waar browsers in de toekomst voor gebruikt zullen worden.</p>
+
+			<p>HTML5 zorgt ervoor dat browsers die geen canvas ondersteunen, de inhoud tonen die in het &lt;canvas&gt; element zit. Zo kan je bv. terugvallen op een tekst, een afbeelding, of zoals in dit geval een flash-applicatie:</p>
+
+			<p><pre><code>&lt;canvas id="quake2-port" width="800" height="600"&gt;
+	&lt;object type="application/x-shockwave-flash" data="quake2.swf" width="0" height="0"&gt;
+  		&lt;param name="movie" value="quake2.swf"&gt;
+  		&lt;param name="quality" value="high"&gt;
+	&lt;/object&gt;
+&lt;/canvas&gt;</code></pre></p>
+
+			<p>&lt;svg&gt; lijkt op &lt;canvas&gt; in de zin dat het ook gebruikt wordt om graphics te renderen, maar ze worden elk voor andere doeleinden gebruikt. Canvas is pixel-based, terwijl SVG vector-based is. Daarom worden grafieken of landkaarten waarbij je moet kunnen inzoomen vaker in &lt;svg&gt; gerenderd. </p>-->
+
+		</section>
+
+		
+<!--
+		<section>
+			
+			<h2>JavaScript</h2>
+
+			<h3>geolocation API</h3>
+
+
+			<h3>Canvas API</h3>
+
+
+			<h3>SVG API</h3>
+
+
+
+			<h3>local storage (cache & database) API</h3>
+
+
+			
+			<h3>Web Worker API (Aw Snap!)</h3>
+			<p>JavaScript in de browser is 'blocking', wat wil zeggen dat ze de browser alle activiteiten zal pauseren tot het script volledig is uitgevoerd.</p>
+
+			<p>Als je een per ongeluk een infinite loop hebt geprogrammeerd zoals hier:
+			<code>while( true )
+{
+	console.log('Evil laughter');
+}
+			</code>
+
+			dan loopt je browser onherroepelijk vast. Door deze scripts in een Web Worker te injecteren, wordt het script 'non-blocking' zal de browser ze in de achtergrond uitvoeren wanneer er tijd voor is.</p>
+
+			<code>
+			var EvilLaughterWorker	=	new Worker('evil-laughter.js')
+			</code>
+			
+		</section>
+-->
+        
+    </body>
+</html>
