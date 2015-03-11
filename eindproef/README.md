@@ -109,20 +109,10 @@ totaalprijs, unieke code , klant & status)
  - Product toevoegen
  - Bestellingen	
 
-##### Product wijzigen (admin-pagina)
+##### Product overzicht (admin-pagina)
 Bevat dezelfde structuur als de publieke Product-pagina.
-- Detail-pagina is in dit geval niet nodig
 - Bij het overzicht van de producten per categorie, staat nu ook een knop "wijzigen"
-- Wanneer de winkeleigenaar op deze knop klikt, kan hij de gegevens van het product aanpassen
-
-##### Product toevoegen (admin-pagina)
-- Bevat een formulier waarop een product toegevoegd kan worden
-- Een product heeft:
- - categorie
- - titel
- - foto
- - beschrijving
- - prijs
+- Wanneer de winkeleigenaar op deze knop klikt, kan hij de gegevens van het product aanpassen (product wijzigen)
 
 ##### Product wijzigen (admin-pagina)
 - Bevat een overzicht van alle bestellingen
@@ -134,6 +124,15 @@ Bevat dezelfde structuur als de publieke Product-pagina.
  - Status
 - De bestellingen zijn gerangschikt per status: besteld, betaald, verstuurd
 - De winkeleigenaar heeft de mogelijkheid om de bestelling van status te veranderen OF te verwijderen
+
+##### Product toevoegen (admin-pagina)
+- Bevat een formulier waarop een product toegevoegd kan worden
+- Een product heeft:
+ - categorie
+ - titel
+ - foto
+ - beschrijving
+ - prijs
 
 ## Algemeen
 
