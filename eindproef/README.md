@@ -5,7 +5,7 @@ Eindwerk Syntra VDO Web Developer 2014 - 2015
 
 Tegen 26/3:
 - Individuele planning invullen: https://docs.google.com/spreadsheets/d/1aOf7pineH3G13K16rJO9ly2VWYrlCPvF1UWpKKN4Rn0/edit?usp=sharing
-- Alle stappen van de strategie TOT effectieve uitwerking moeten afgewerkt zijn -> anders niet beginnen programmeren.
+- Alle stappen van de strategie TOT en met mock ups moeten afgewerkt zijn -> anders niet beginnen programmeren.
 - Mag vroeger aan programmeren beginnen MITS goedkeuring
 
 Na 26/3
