@@ -82,7 +82,7 @@ Bestaande rij met nieuwe data updaten.
 
 ````
 UPDATE tabelnaam 
-  SET ( kolomnaam1 = value1 [, kolomnaam2 = value2, ... ] )
+  SET kolomnaam1 = value1 [, kolomnaam2 = value2, ... ]
 ````
 
 ## Data verwijderen

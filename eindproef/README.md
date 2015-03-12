@@ -5,7 +5,7 @@ Eindwerk Syntra VDO Web Developer 2014 - 2015
 
 Tegen 26/3:
 - Individuele planning invullen: https://docs.google.com/spreadsheets/d/1aOf7pineH3G13K16rJO9ly2VWYrlCPvF1UWpKKN4Rn0/edit?usp=sharing
-- Alle stappen van de strategie TOT effectieve uitwerking moeten afgewerkt zijn -> anders niet beginnen programmeren.
+- Alle stappen van de strategie TOT en met mock ups moeten afgewerkt zijn -> anders niet beginnen programmeren.
 - Mag vroeger aan programmeren beginnen MITS goedkeuring
 
 Na 26/3
@@ -109,11 +109,13 @@ totaalprijs, unieke code , klant & status)
  - Product toevoegen
  - Bestellingen	
 
-##### Product wijzigen (admin-pagina)
+##### Product overzicht (admin-pagina)
 Bevat dezelfde structuur als de publieke Product-pagina.
-- Detail-pagina is in dit geval niet nodig
 - Bij het overzicht van de producten per categorie, staat nu ook een knop "wijzigen"
-- Wanneer de winkeleigenaar op deze knop klikt, kan hij de gegevens van het product aanpassen
+- Wanneer de winkeleigenaar op deze knop klikt, kan hij de gegevens van het product aanpassen (product wijzigen)
+
+#### Product wijzigen (admin-pagina)
+- Op deze pagina kan je een individueel product aanpassen
 
 ##### Product toevoegen (admin-pagina)
 - Bevat een formulier waarop een product toegevoegd kan worden
@@ -124,7 +126,7 @@ Bevat dezelfde structuur als de publieke Product-pagina.
  - beschrijving
  - prijs
 
-##### Product wijzigen (admin-pagina)
+##### Bestellingen overzicht (admin-pagina)
 - Bevat een overzicht van alle bestellingen
 - Bestellingen bevatten minstens:
  - datum
@@ -134,6 +136,8 @@ Bevat dezelfde structuur als de publieke Product-pagina.
  - Status
 - De bestellingen zijn gerangschikt per status: besteld, betaald, verstuurd
 - De winkeleigenaar heeft de mogelijkheid om de bestelling van status te veranderen OF te verwijderen
+
+
 
 ## Algemeen
 
