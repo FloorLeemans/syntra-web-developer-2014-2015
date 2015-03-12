@@ -220,7 +220,7 @@ Bundel en eindwerk worden digitaal afgeleverd
 - Evolutie (10%)
  - Denkt na over methodiek
  - Doet onderzoek
- - Ziet eigen fouten in en verbeterd deze waar mogelijk
+ - Ziet eigen fouten in en verbetert deze waar mogelijk
  
 - Permanente evaluatie doorheen de eindwerkbegeleiding (20%)
 
